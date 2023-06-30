@@ -45,5 +45,5 @@ for stage in divs:
 json_str = json.dumps(data, indent=4)
 print(json_str)
 
-# with open("course_data.json", "w" ) as file:
-#     pass
+with open("course_data.json", "w" ) as file:
+    json.dump(data, file)
