@@ -30,16 +30,17 @@ for stage in divs:
         course_description = course.find('p', class_='description').text.strip()
         data[stage_part][course_code]["Description"] = course_description
 
-        restrictions = course.find('p', class_='prerequisite')
-        if restrictions != None:
-            restrictions_data = restrictions.text.split()
-
-            if restrictions_data[0] == 'Restriction:':
-                restrictions_string = " ".join(restrictions_data[1:])
-                data[stage_part][course_code]['Restriction'] = restrictions_string
-            if restrictions_data[0] == 'Prerequisite:':
-                restrictions_string = " ".join(restrictions_data[1:])
-                data[stage_part][course_code]['Prerequisite'] = restrictions_string
+        restrictions_list = course.find_all('p', class_='prerequisite')
+        # print(restrictions_list)
+        for restrictions in restrictions_list:
+            if restrictions != None:
+                restrictions_data = restrictions.text.split()
+                if restrictions_data[0] == 'Restriction:':
+                    restrictions_string = " ".join(restrictions_data[1:])
+                    data[stage_part][course_code]['Restriction'] = restrictions_string
+                if restrictions_data[0] == 'Prerequisite:':
+                    restrictions_string = " ".join(restrictions_data[1:])
+                    data[stage_part][course_code]['Prerequisite'] = restrictions_string
 
 
 json_str = json.dumps(data, indent=4)
