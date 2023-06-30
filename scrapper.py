@@ -15,13 +15,23 @@ for stage in divs:
     # Finds Stage Number/Title. | Example: Stage I
     stage_part = stage.find('h3', class_='stage').text.strip()
     data[stage_part] = dict()
-    # Finds Course Code Number | Example: COMPSCI 101
+    
     courses_div = stage.find_all('div', class_='coursePaper section')
     for course in courses_div:
+        # Finds Course Code Number | Example: COMPSCI 101
         course_code = course.find('div', class_='courseA').text.strip()
         data[stage_part][course_code] = dict()
 
-print(data)
+        # Finds Course Name | Example: Principles of Programming
+        course_name = course.find('p', class_='title').text.strip()
+        data[stage_part][course_code]["Name"] = course_name
+
+        # Finds Course Description | Example: A practical introduction to computers ...
+        course_description = course.find('p', class_='description').text.strip()
+        data[stage_part][course_code]["Description"] = course_description
+
+json_str = json.dumps(data, indent=4)
+print(json_str)
 
 # with open("course_data.json", "w" ) as file:
 #     pass
