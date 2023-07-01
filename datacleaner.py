@@ -61,16 +61,39 @@ for stage in data.keys():
                 data[stage][course]['Take Before'] = rs
             else:
                 data[stage][course]['Restriction'] = parse_course_string(data[stage][course]['Restriction'])
+        if 'Prerequisite' in data[stage][course].keys():
+            data[stage][course]['Prereqs'] = dict()
+            # Academic Approval
+            if 'approval of' in data[stage][course]['Prerequisite'].lower():
+                data[stage][course]['Prereqs']['AH/N Approval'] = True
+            else:
+                data[stage][course]['Prereqs']['AH/N Approval'] = False
+            if 'gpa' in data[stage][course]['Prerequisite'].lower():
+                gpa_match = re.search(r'(?<=of )\d+', data[stage][course]['Prerequisite'])
+                gpa = int(gpa_match.group())
+                data[stage][course]['Prereqs']['Min GPA'] = gpa
+            else:
+                data[stage][course]['Prereqs']['Min GPA'] = None
+
 
 
 json_str = json.dumps(data, indent=4)
 print(json_str)
 
 '''
-Catergories
+Restriction Catergories
 - Cannot be taken with or after
 - Completely Restricted
-
 Filters Required
 - Cannot be taken with
+'''
+
+'''
+Prerequisite Catergories
+- Course : For example, 'MATHS 102'
+- High School Requirements : ' at least 13 credits in Mathematics at NCEA Level 3 '
+- Points from courses : '15  points from COMPSCI 105, 107, 130' 
+- Minimum GPA : 'Minimum GPA of 5.0
+- Points from previous stage : '15 points at Stage II in Computer Science'
+- Approval of Academic Head or nominee : COMPLETED
 '''
