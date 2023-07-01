@@ -1,4 +1,8 @@
 """
+Generates "initial cleaned data"
+"""
+
+"""
 Add few restrictions in Stage I manually into output json.
 """
 
@@ -78,6 +82,9 @@ for stage in data.keys():
 
 
 json_str = json.dumps(data, indent=4)
+jsonFile = open("initial_cleaned_data.json", "w")
+jsonFile.write(json_str)
+jsonFile.close()
 print(json_str)
 
 '''
@@ -93,7 +100,7 @@ Prerequisite Catergories
 - Course : For example, 'MATHS 102'
 - High School Requirements : ' at least 13 credits in Mathematics at NCEA Level 3 '
 - Points from courses : '15  points from COMPSCI 105, 107, 130' 
-- Minimum GPA : 'Minimum GPA of 5.0
+- Minimum GPA : 'Minimum GPA of 5.0 : COMPLETED
 - Points from previous stage : '15 points at Stage II in Computer Science'
 - Approval of Academic Head or nominee : COMPLETED
 '''
