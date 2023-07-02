@@ -84,7 +84,18 @@
             "Description": "Fundamental programming techniques and processes, such as conditionals, iteration, recursion, functions, testing and debugging. Efficient ways to organise and manipulate data, including sorting and searching algorithms. Writing software that uses and implements common abstract data types such as lists, stacks, queues, dictionaries and trees. Prerequisite: COMPSCI 101, or Achievement Standard NCEA Level 3 Digital Technologies and Programming: 91906 Use complex programming techniques to develop a computer program, or 91637 Develop a complex computer program for a specified task",
             "Restriction": [
                 "COMPSCI 105"
-            ]
+            ],
+            "Prereqs": {
+                "AH/N Approval": false,
+                "Min GPA": null,
+                "Prereq_Courses": [
+                    [
+                        "COMPSCI 101",
+                        "Achievement Standard NCEA Level 3 Digital Technologies and Programming: 91906 Use complex programming techniques to develop a computer program",
+                        "91637 Develop a complex computer program for a specified task"
+                    ]
+                ]
+            }
         }
     },
     "Stage II": {
