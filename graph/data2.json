@@ -27,7 +27,7 @@
       "code": "COMPSCI 210",
       "name": "Computer Organisation",
       "description": "The low level representation of data and algorithms",
-      "prerequisites": [2],
+      "prerequisites": ["2"],
       "restrictions": [],
       "stage": 2
     },
@@ -35,7 +35,7 @@
       "code": "COMPSCI 220",
       "name": "Algorithms and Data Structures",
       "description": "An introduction to algorithms and data structures",
-      "prerequisites": [3],
+      "prerequisites": ["3"],
       "restrictions": [],
       "stage": 2
     },
@@ -43,7 +43,7 @@
       "code": "COMPSCI 230",
       "name": "Object Oriented Software Development",
       "description": "The design and implementation of object-oriented programmes",
-      "prerequisites": [1],
+      "prerequisites": ["1"],
       "restrictions": [],
       "stage": 2
     },
@@ -51,7 +51,7 @@
       "code": "COMPSCI 320",
       "name": "Applied Algorithmics",
       "description": "Fundamental design techniques for algorithmic problem-solving",
-      "prerequisites": [5],
+      "prerequisites": ["5"],
       "restrictions": [],
       "stage": 3
     },
@@ -59,7 +59,7 @@
       "code": "COMPSCI 330",
       "name": "Software Development Methodologies",
       "description": "An introduction to software development methodologies",
-      "prerequisites": [6],
+      "prerequisites": ["6"],
       "restrictions": [],
       "stage": 3
     },
@@ -67,7 +67,7 @@
       "code": "COMPSCI 340",
       "name": "Operating Systems",
       "description": "Operating system principles",
-      "prerequisites": [4, 5],
+      "prerequisites": ["4", "5"],
       "restrictions": [],
       "stage": 3
     }
