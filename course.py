@@ -1,5 +1,3 @@
-
-
 class Course:
     def __init__(self, course_id, code, description, prerequisites, restrictions, stage):
         print(course_id)
