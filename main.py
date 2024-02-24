@@ -17,16 +17,21 @@ for course_id, course_info in data.items():
     print()
 
 courses = []
-while True:
-    selection = input('Select Course: ')
-    if selection == 'exit':
-        break
-    course = Graph(selection, data[selection]['code'], data[selection]['description'], data[selection]['prerequisites'], data[selection]['restrictions'], data[selection]['stage'])
-    courses.append(course)
 
-    print(courses)
+def prompt_user():
+    for i in range(4):
+        selection = input('Select Course: ')
+        if selection == 'exit':
+            break
+        course = Graph(selection, data[selection]['code'], data[selection]['description'], data[selection]['prerequisites'], data[selection]['restrictions'], data[selection]['stage'])
+        courses.append(course)
 
-for c in courses:
-    print(c.id, c.code, c.description, c.restrictions, c.prerequisites, c.stage)
+        print(courses)
+
+    for c in courses:
+        print(c.id, c.code, c.description, c.restrictions, c.prerequisites, c.stage)
+
+prompt_user()
+prompt_user()
 
 # for course in courses = 

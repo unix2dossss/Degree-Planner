@@ -1,6 +1,6 @@
 import json
 # from course import Course
-from graph.ADT import Graph
+from ADT import Graph
 
 # Load data from the JSON file
 with open('data2.json', 'r') as file:
@@ -18,29 +18,28 @@ if __name__ == "__main__":
 
 
 # if __name__ == "__main__":
-    # Create a graph
-    # g = Graph()
-# 
-    # Add vertices
-    # g.add_vertex('110')
-    # g.add_vertex('120')
-    # g.add_vertex('130')
-    # g.add_vertex('210')
-# 
-    # Add edges
-    # g.add_edge('210', '110')
-    # g.add_edge('210', '130')
-# 
-    # g.add_edge('220', '120')
-    # g.add_edge('220', '130')
-# 
-    # g.add_edge('230', '130')
-# 
-# 
-    # Print the graph
-    # print("Graph:")
-    # print(g)
-# 
-    # Get neighbors of a vertex
-    # print("Neighbors of 130:", g.get_neighbors('210'))
-# 
+#     # Create a graph
+#     g = Graph()
+
+#     # Add vertices
+#     g.add_vertex('110')
+#     g.add_vertex('120')
+#     g.add_vertex('130')
+#     g.add_vertex('210')
+
+#     # Add edges
+#     g.add_edge('210', '110')
+#     g.add_edge('210', '130')
+
+#     g.add_edge('220', '120')
+#     g.add_edge('220', '130')
+
+#     g.add_edge('230', '130')
+
+
+#     # Print the graph
+#     print("Graph:")
+#     print(g)
+
+#     # Get neighbors of a vertex
+#     print("Neighbors of 130:", g.get_neighbors('210'))

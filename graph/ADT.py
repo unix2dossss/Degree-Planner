@@ -6,12 +6,12 @@ class Graph:
         if vertex not in self.adj_list:
             self.adj_list[vertex] = []
 
-    def add_edge(self, start, end):
-        if start not in self.adj_list:
-            self.add_vertex(start)
-        if end not in self.adj_list:
-            self.add_vertex(end)
-        self.adj_list[start].append(end)
+    def add_edge(self, course, prereq):
+        if course not in self.adj_list:
+            self.add_vertex(course)
+        if prereq not in self.adj_list:
+            self.add_vertex(prereq)
+        self.adj_list[course].append(prereq)
 
     def get_neighbors(self, vertex):
         if vertex in self.adj_list:
