@@ -1,6 +1,6 @@
 import json
 # from course import Course
-from graphADT import Graph
+from graph.ADT import Graph
 
 # Load data from the JSON file
 with open('data2.json', 'r') as file:

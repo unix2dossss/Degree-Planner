@@ -1,5 +1,5 @@
 import json
-from course import Course
+from graph.ADT import Graph, Tree
 
 # Load data from the JSON file
 with open('data.json', 'r') as file:
@@ -21,7 +21,7 @@ while True:
     selection = input('Select Course: ')
     if selection == 'exit':
         break
-    course = Course(selection, data[selection]['code'], data[selection]['description'], data[selection]['prerequisites'], data[selection]['restrictions'], data[selection]['stage'])
+    course = Graph(selection, data[selection]['code'], data[selection]['description'], data[selection]['prerequisites'], data[selection]['restrictions'], data[selection]['stage'])
     courses.append(course)
 
     print(courses)
